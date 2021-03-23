@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+//避免button點到icon
+i {
+    pointer-events: none;
+}
+
+body {
+    background: linear-gradient(90deg, #69B0AC, #268785);
+}
+
+.bgWrap {
+    background-image: url('/assets/images/texture.png');
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+header {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        color: white;
+        font-size: 3rem;
+    }
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input,
+    button {
+        border: none;
+        padding: 0.25rem 0.5rem;
+        font-size: 1.5rem;
+        margin: 0.25rem;
+        border-radius: 5px;
+    }
+
+    input[type="number"] {
+        width: 50px;
+        text-align: center;
+    }
+
+    //移除number按鈕
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
+
+div.sort {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div.todo {
+            width: 30vw;
+            display: flex;
+            align-items: center;
+            margin: 0.2rem 0;
+
+            p {
+                background-color: white;
+                padding: 0.25rem 0.5rem;
+                font-size: 1.5rem;
+            }
+
+            p.todo-text {
+                width: 50%;
+            }
+
+            p.todo-time {
+                width: 20%;
+                text-align: center;
+            }
+
+            button {
+                border: none;
+                padding: 0.25rem 0.5rem;
+                font-size: 1.5rem;
+                margin: 0.25rem;
+                border-radius: 5px;
+                width: 60px;
+                cursor: pointer;
+            }
+
+            button.complete {
+                background-color: #86C166;
+            }
+
+            button.delete {
+                background-color: #F19483;
+            }
+        }
+
+    }
+}
+
+.done {
+    opacity: 0.5;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    div.sort {
+        div.todo {
+            min-width: 500px;
+        }
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleDown {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}

@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+i {
+  pointer-events: none;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#69B0AC), to(#268785));
+  background: linear-gradient(90deg, #69B0AC, #268785);
+}
+
+.bgWrap {
+  background-image: url("/assets/images/texture.png");
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+header {
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+
+form input,
+form button {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  margin: 0.25rem;
+  border-radius: 5px;
+}
+
+form input[type="number"] {
+  width: 50px;
+  text-align: center;
+}
+
+form input::-webkit-outer-spin-button,
+form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form input[type=number] {
+  -moz-appearance: textfield;
+}
+
+form button {
+  cursor: pointer;
+}
+
+div.sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div.sort section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.sort section div.todo {
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.2rem 0;
+}
+
+div.sort section div.todo p {
+  background-color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+}
+
+div.sort section div.todo p.todo-text {
+  width: 50%;
+}
+
+div.sort section div.todo p.todo-time {
+  width: 20%;
+  text-align: center;
+}
+
+div.sort section div.todo button {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  margin: 0.25rem;
+  border-radius: 5px;
+  width: 60px;
+  cursor: pointer;
+}
+
+div.sort section div.todo button.complete {
+  background-color: #86C166;
+}
+
+div.sort section div.todo button.delete {
+  background-color: #F19483;
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  div.sort div.todo {
+    min-width: 500px;
+  }
+}
+
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
