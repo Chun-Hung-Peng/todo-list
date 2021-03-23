@@ -2,7 +2,7 @@ let add = document.querySelector("form button");
 let section = document.querySelector("section");
 add.addEventListener("click", e => {
     e.preventDefault()
-    // get input value
+    //得到輸入值
     let form = e.target.parentElement
     let todoText = form.children[0].value
     let todoMounth = form.children[1].value
