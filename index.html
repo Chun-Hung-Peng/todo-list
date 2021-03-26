@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
-    <title>Todo List</title>
+    <title>待辦清單</title>
     <meta name="description" content="Todo List 實作網頁" />
     <link
       rel="stylesheet"
@@ -13,29 +13,39 @@
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
+    <!-- icon -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- goole font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <div class="bgWrap"></div>
-    <header>
-      <h1>My Todo List</h1>
-    </header>
+    <div class="title">
+      <h1>我的待辦清單</h1>
+      <h2>リストを行うには</h2>
+    </div>
     <form>
       <input type="text" name="" id="" />
-      <input type="number" min="1" max="12" placeholder="M" required />
-      <input type="number" min="1" max="12" placeholder="D" required />
-      <button type="submit">Add</button>
+      <input type="number" min="1" max="12" placeholder="月" required />
+      <input type="number" min="1" max="12" placeholder="日" required />
+      <button type="submit">添加事項</button>
     </form>
     <br />
     <div class="sort">
       <br />
       <section></section>
     </div>
+    <script src="./app.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
-  <script src="./app.js"></script>
 </html>
